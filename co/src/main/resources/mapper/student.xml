@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.spring.springboot.dao.StudentMagrDao">
+
+    <resultMap type="org.spring.springboot.domain.student" id="student">
+        <id column="student_no"  property="studentNo"/>
+        <result column="sex" property="sex" javaType="String" jdbcType="VARCHAR"/> 
+        <result column="birthday" property="birthday" javaType="String" jdbcType="VARCHAR"/> 
+      	 <result column="room_no" property="room_no" javaType="int" jdbcType="INTEGER"/> 
+   </resultMap>
+    <select id="getAllInfo" statementType="CALLABLE" resultMap="student" >
+	</select>
+</mapper>

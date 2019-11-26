@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>agsc</groupId>
+  <artifactId>Erp</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Erp01</name>
+  <url>http://maven.apache.org</url>
+  
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId><!-- 依赖管理 -->
+		<version>1.5.3.RELEASE</version><!-- 可选其他版本，现在已有2.0.0.RELEASE -->
+		<relativePath></relativePath>
+	</parent>
+	
+	<properties>
+        <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
+        <mysql-connector>5.1.39</mysql-connector>
+    </properties>
+    
+  <dependencies>
+  <!-- <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
+			<version>3.8.1</version> <scope>test</scope> </dependency> -->
+		<!-- Spring Boot Web 依赖 -->
+  
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-test-autoconfigure</artifactId>
+			<version>1.3.2</version>
+			<scope>test</scope>
+		</dependency>
+         <!-- Spring Boot Test 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+        <!--mybatis测试依赖-->
+		<dependency>
+		    <groupId>org.mybatis.spring.boot</groupId>
+		    <artifactId>mybatis-spring-boot-test-autoconfigure</artifactId>
+		    <version>1.3.2</version>
+		    <scope>test</scope>
+		</dependency>
+		<!-- Maven ibatis 依赖 -->
+		<!-- <dependency>
+		<groupId>org.apache.ibatis</groupId>
+		<artifactId>ibatis-core</artifactId>
+		<version>3.0</version>
+		</dependency> -->
+		<!-- Spring Boot Mybatis 依赖 -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.18</version>
+</dependency>
+		<!-- Spring Boot Mybatis 博文地址依赖 -->
+		<!-- <dependency>
+	    <groupId>org.mybatis.spring.boot</groupId>
+	    <artifactId>mybatis-spring-boot-starter</artifactId>
+	    <version>1.3.2</version>
+	</dependency> -->
+
+        <!-- PostgreSQL 连接驱动依赖 -->
+        <dependency>
+	      <groupId>org.postgresql</groupId>
+	      <artifactId>postgresql</artifactId>
+	      <scope>runtime</scope>
+	    </dependency>
+
+		
+		<!-- MySQL 连接驱动依赖 -->
+      <!--   <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            </dependency> -->
+        <dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-logging-juli</artifactId>
+		</dependency>
+		
+				<!-- 添加servlet依赖模块 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- 添加jstl标签库依赖模块 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <!-- 使用jsp引擎，springboot内置tomcat没有此依赖 -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+  </dependencies>
+  
+  
+  <build>
+		<finalName>UAV-project</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin </artifactId><!-- 运行main方法所必须 -->
+			</plugin>
+		</plugins>
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis-spring-boot}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.tomcat.embed</groupId>
+				<artifactId>tomcat-embed-logging-juli</artifactId>
+				<version>8.0.23</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+  
+  
+  
+</project>
