@@ -19,7 +19,6 @@ public class Application {
 		// 程序启动入口
 		// 启动嵌入式的 Tomcat 并初始化 Spring 环境及其各 Spring 组件
 		SpringApplication.run(Application.class, args);
-//		TestQ object = SpringUtils.getObject(TestQ.class);
-//		object.getAllInfo();
+		//测试git
 	}
 }
